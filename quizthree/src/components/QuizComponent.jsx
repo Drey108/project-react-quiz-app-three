@@ -23,6 +23,7 @@ function QuizComponent() {
   const handleOption = (e, optionIndex) => {
     const selectedAnswer = e.target.innerText;
     const isCorrect = selectedAnswer === questions[num].answer;
+    alert(isCorrect ? "Correct answer" : "Incorrect answer");
     if (!attempted.includes(num)) {
       setAttempted((prevAttempted) => [...prevAttempted, num]);
       setScore((prevScore) => (isCorrect ? prevScore + 1 : prevScore));
